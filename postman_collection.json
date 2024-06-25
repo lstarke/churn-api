@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "6ef56dff-54b4-46a7-8333-2ba084e3c7c3",
+		"name": "churn-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "915178"
+	},
+	"item": [
+		{
+			"name": "/churn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenure\": 34,\r\n    \"OnlineSecurity\": \"Yes\",\r\n    \"TechSupport\": \"No\",\r\n    \"Contract\": \"One year\",\r\n    \"tenure_description\": \"greater than a year to 5 years\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/churn",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"churn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/churn",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/churn",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"churn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/churn/features",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/churn/features",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"churn",
+						"features"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://127.0.0.1:5000",
+			"type": "string"
+		}
+	]
+}
