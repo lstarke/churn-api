@@ -1,10 +1,7 @@
 from flask import Flask
 from flask_smorest import Api
-from joblib import load
 
 from resources.churn import blp as ChurnBlueprint
-
-model = load("ml-models/xgb_model.joblib")
 
 app = Flask(__name__)
 
